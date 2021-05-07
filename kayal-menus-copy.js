@@ -18,8 +18,8 @@ var specialtiesImages={
 }
 
 
-var searchedElement=document.getElementsByClassName("menu__item_1eM menu__item--light_UNr w-nav__item menu__item--submenu_2Ot w-nav__item--submenu")
-var newElements=[]
+let searchedElement=document.getElementsByClassName("menu__item_1eM menu__item--light_UNr w-nav__item menu__item--submenu_2Ot w-nav__item--submenu")
+let newElements=[]
 for(const elements of searchedElement){
 	if(elements.innerText.indexOf("SPECIALTIES")!==-1 && elements.parentElement.parentElement.parentElement.className.indexOf("header__burger_3P8") !== 0){
 		newElements.push(elements.getElementsByTagName("div")[0].children[0].children)
@@ -37,4 +37,4 @@ if(newElements.length>0){
 	}
 	}
 }
-newElements=null
+delete(newElements)
