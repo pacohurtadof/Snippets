@@ -30,5 +30,8 @@ for(const elements of newElements){
 		subElements.style.listStyle= 'square inside '+ specialtiesImages[subElements.innerText]
 		subElements.getElementsByTagName("span")[0].style.display= "inline-block"
 		subElements.getElementsByTagName("span")[0].style.lineHeight= "300%"
+		subElements.style.marginBottom= "0px"
+		subElements.style.marginTop= "0px"
+
 }
 }
