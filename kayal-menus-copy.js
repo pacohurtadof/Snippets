@@ -37,4 +37,4 @@ if(newElements.length>0){
 	}
 	}
 }
-delete(newElements)
+newElements=null
