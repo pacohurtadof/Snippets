@@ -8,7 +8,7 @@ var specialtiesImages={
 	'Rheumatology Center':'',
 	'Osteoporosis Center':'',
 	'Pain and Spine Center':'',
-	'Osteoarthritis and Orthobiologics Center':'',
+	'Osteoarthritis and Orthobiologics Center':'url("https://repuso.com/assets/5295d87e2b054627535c8aefd86cc91d.png")',
 	'Sports Medicine':'',
 	'Chiropractic':'',
 	'Physical Therapy':'',
@@ -25,13 +25,15 @@ for(const elements of searchedElement){
 		newElements.push(elements.getElementsByTagName("div")[0].children[0].children)
 	}
 }
-for(const elements of newElements){
-	for(const subElements of elements){
-		subElements.style.listStyle= 'square inside '+ specialtiesImages[subElements.innerText]
-		subElements.getElementsByTagName("span")[0].style.display= "inline-block"
-		subElements.getElementsByTagName("span")[0].style.lineHeight= "300%"
-		subElements.style.marginBottom= "0px"
-		subElements.style.marginTop= "0px"
+if(newElements.length>0){
+	for(const elements of newElements){
+		for(const subElements of elements){
+			subElements.style.listStyle= 'square inside '+ specialtiesImages[subElements.innerText]
+			subElements.getElementsByTagName("span")[0].style.display= "inline-block"
+			subElements.getElementsByTagName("span")[0].style.lineHeight= "300%"
+			subElements.style.marginBottom= "0px"
+			subElements.style.marginTop= "0px"
 
-}
+	}
+	}
 }
