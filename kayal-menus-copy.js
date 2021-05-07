@@ -37,3 +37,4 @@ if(newElements.length>0){
 	}
 	}
 }
+newElements=null
