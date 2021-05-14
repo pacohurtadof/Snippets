@@ -20,6 +20,7 @@ var specialtiesImages={
 
 let searchedElement=document.getElementsByClassName("menu__item_1eM menu__item--light_UNr w-nav__item menu__item--submenu_2Ot w-nav__item--submenu")
 let newElements=[]
+let imageElement= document.createElement('div')
 for(const elements of searchedElement){
 	if(elements.innerText.indexOf("SPECIALTIES")!==-1 && elements.parentElement.parentElement.parentElement.className.indexOf("header__burger_3P8") !== 0){
 		newElements.push(elements.getElementsByTagName("div")[0].children[0].children)
@@ -28,11 +29,22 @@ for(const elements of searchedElement){
 if(newElements.length>0){
 	for(const elements of newElements){
 		for(const subElements of elements){
-			subElements.style.listStyle= 'square inside '+ specialtiesImages[subElements.innerText]
-			subElements.getElementsByTagName("span")[0].style.display= "inline-block"
-			subElements.getElementsByTagName("span")[0].style.lineHeight= "300%"
-			subElements.style.marginBottom= "0px"
-			subElements.style.marginTop= "0px"
+		//	subElements.style.listStyle= 'square inside '+ specialtiesImages[subElements.innerText]
+			//subElements.getElementsByTagName("span")[0].style.display= "inline-block"
+			//subElements.getElementsByTagName("span")[0].style.lineHeight= "300%"
+			//subElements.style.marginBottom= "0px"
+			//subElements.style.marginTop= "0px"
+			let temp= imageElement.cloneNode(true)
+			temp.style.display= "inline-block"
+			temp.style.height= "39px"
+			temp.style.width= "23%"
+		//	temp.style.margin= "9px"
+			temp.style.backgroundImage= specialtiesImages[subElements.innerText]
+			temp.style.backgroundRepeat= "no-repeat"
+			temp.style.height= "39px"
+			console.log(imageElement)
+			//subElements.insertBefore(imageElement, subElements.children[0])
+			subElements.prepend(temp)
 
 	}
 	}
