@@ -33,13 +33,16 @@ if(newElements.length>0){
 			let temp= imageElement.cloneNode(true)
 			temp.style.display= "inline-block"
 			temp.style.height= "39px"
-			temp.style.width= "23%"
+			temp.style.width= "27%"
 			temp.style.backgroundImage= specialtiesImages[subElements.innerText]
 			temp.style.backgroundRepeat= "no-repeat"
 			temp.style.height= "39px"
-			console.log(imageElement)
 			//subElements.insertBefore(imageElement, subElements.children[0])
 			subElements.prepend(temp)
+			
+			let tempSpan= temp.parentElement.getElementsByTagName("span")[0]
+			tempSpan.style.display= "inline-block"
+			tempSpan.style.bottom= "12px"
 
 	}
 	}
