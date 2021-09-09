@@ -33,10 +33,8 @@ if(newElements.length>0){
 	for(const elements of newElements){
 		for(const subElements of elements){
             		subElements.style.width = "100%"
-			subElements.style.overflow = "visible"
 			subElements.style.margin = "0"
 			subElements.style.marginBottom = "5px"
-			subElements.setAttribute("onmouseover", "this.style.backgroundColor='white'")
 			let temp= imageElement.cloneNode(true)
 			temp.style.display= "inline-block"
 			temp.style.height= "32px"
