@@ -26,6 +26,7 @@ for(const elements of searchedElement){
 	if(elements.innerText.indexOf("Kayal Specialties Center")!==-1 && elements.parentElement.parentElement.parentElement.className.indexOf("header__burger_3P8") !== 0){
 		newElements.push(elements.getElementsByTagName("div")[0].children[0].children)
 		elements.getElementsByTagName("div")[0].children[0].style.overflow = "hidden"
+		elements.getElementsByTagName("div")[0].children[0].style.width = "120%"
 	}
 }
 if(newElements.length>0){
