@@ -29,22 +29,23 @@ for(const elements of searchedElement){
 if(newElements.length>0){
 	for(const elements of newElements){
 		for(const subElements of elements){
-		
+            		subElements.style.width = "100%"
 			let temp= imageElement.cloneNode(true)
 			temp.style.display= "inline-block"
-			temp.style.height= "39px"
-			temp.style.width= "27%"
+			temp.style.height= "32px"
+			temp.style.width= "28%"
 			temp.style.backgroundImage= specialtiesImages[subElements.innerText]
 			temp.style.backgroundRepeat= "no-repeat"
-			temp.style.height= "39px"
+			temp.style.height= "32px"
 			//subElements.insertBefore(imageElement, subElements.children[0])
 			subElements.prepend(temp)
 			
 			let tempSpan= temp.parentElement.getElementsByTagName("span")[0]
 			tempSpan.style.display= "inline-block"
-			tempSpan.style.bottom= "12px"
+			tempSpan.style.bottom= "11px"
 
 	}
-	}
+      
+		}
 }
 newElements=null
